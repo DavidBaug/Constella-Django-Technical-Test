@@ -7,7 +7,7 @@ In order to run the server you will have to install Python. Once you have Python
 ###### Virtual environment creation
 Once you have downloaded your repository create a virtual environment on the directory at the same level as <i>constella_intelligence</i> running the following:
 1. `python -m venv ./myenv`
-2. `source ./myenv/bin/activate.fish (use the appropriate activate script based on your shell)`
+2. `source ./myenv/bin/activate`
 3. `python -m pip install -U pip django`
 
 ###### Django project initialitation
