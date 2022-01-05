@@ -13,4 +13,8 @@ Once you have downloaded your repository create a virtual environment on the dir
 ###### Django project initialitation
 
 In your project open a terminal on <i>constella_intelligence/src</i> and run the following:
-1. `python manage.py runserver`
+
+1. `pip install -r requirements.txt`
+2. `cd src`
+3. `cp main/settings/local.sample.env main/settings/local.env`
+4. `python manage.py runserver`
