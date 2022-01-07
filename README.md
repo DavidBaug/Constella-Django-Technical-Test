@@ -14,7 +14,10 @@ Once you have downloaded your repository create a virtual environment on the dir
 
 In your project open a terminal on <i>constella_intelligence/src</i> and run the following:
 
-1. `pip install -r requirements.txt`
-2. `cd src`
-3. `cp main/settings/local.sample.env main/settings/local.env`
-4. `python manage.py runserver`
+1. `cd constella_intelligence`
+2. `pip install -r requirements.txt`
+3. `cd src`
+4. `cp main/settings/local.sample.env main/settings/local.env`
+5. `python manage.py makemigrations`
+6. `python manage.py migrate`
+7. `python manage.py runserver`
