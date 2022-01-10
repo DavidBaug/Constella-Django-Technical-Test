@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Comment</title>
+    </head>
+    <body>
+        <h1>Añade un nuevo comentario</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <input type="textField" name="author" placeholder="Indique su nombre" />
+            <br/>
+            <input type="textArea" name="body" placeholder="Contenido del comentario"/>
+            <br/>
+            <button class="btn btn-secondary">Enviar</button>
+        </form>
+
+        <br/>
+
+    </body>
+</html>

@@ -15,6 +15,7 @@
 <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up</a>
   {% else %}
     {{ block.super }}
+    <a class="btn btn-primary" href="{% url 'comments' %}" role="button">Comments</a>
   {% endif %}
 {% endblock %}
 
