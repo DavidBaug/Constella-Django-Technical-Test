@@ -15,6 +15,8 @@ urlpatterns = [
     path("users/", include(profiles.urls)),
     path("admin/", admin.site.urls),
     path("", include(accounts.urls)),
+    path("comments/", views.CommentsPage.as_view(), name="comments"),
+    path("add_comment/", views.AddComment.as_view(), name="add_comment"),
 ]
 
 # User-uploaded files like profile pics need to be served in development

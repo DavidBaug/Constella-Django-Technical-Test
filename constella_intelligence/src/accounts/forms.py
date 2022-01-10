@@ -6,6 +6,7 @@ from crispy_forms.layout import Layout, Submit, HTML, Field
 from authtools import forms as authtoolsforms
 from django.contrib.auth import forms as authforms
 from django.urls import reverse
+from .models import Comment
 
 
 class LoginForm(AuthenticationForm):
@@ -78,3 +79,13 @@ class SetPasswordForm(authforms.SetPasswordForm):
             Field("new_password2", placeholder="Enter new password (again)"),
             Submit("pass_change", "Change Password", css_class="btn-warning"),
         )
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('author', 'body')
+
+        widgets = {
+            'author': forms.TextInput(attrs = {'class': 'form-control'}),
+            'body': forms.Textarea(attrs = {'class': 'form-control'}),
+        }
